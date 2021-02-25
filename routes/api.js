@@ -8,9 +8,9 @@ router.get('/', (req, res)=> {
 
   const search = req.query.search || "";
   let sort = req.query.sort || defaultSort;
-  console.log(sort);
+  console.log(typeof(sort));
 
-  if (sort !== 1 && sort !== -1){
+  if (sort !== '1' && sort !== '-1'){
     sort = defaultSort;
   }
 
